@@ -1,0 +1,51 @@
+$breakpoints: (
+  sm: 768px,
+  md: 992px,
+  lg: 1200px
+);
+
+$container: (
+	sm: 750px,
+	md: 980px,
+	lg: 1100px
+);
+
+$basic-colors: (
+	--lightblue: #afebff,
+	--lightgrey: #f3f3f3
+);
+
+$inner-outer-space:(
+	0: 0,
+	8: 8,
+	16: 16,
+	32: 32,
+	40: 40
+);
+
+$button-colors:(
+	success: #28a745,
+	info: #17a2b8,
+	danger: #dc3545,
+	warning: #ffc107,
+	primary: #007bff,
+	secondary: #6c757d,
+	disabled: grey
+);
+$button-borders: (
+	success: #28a745,
+	info: #17a2b8,
+	danger: #dc3545,
+	warning: #ffc107,
+	primary: #007bff,
+	secondary: #6c757d,
+	disabled: grey
+);
+
+$inputs: (
+	border: #66afe9,
+	error-border: #a94442,
+	error-border-focus: #843534
+);
+
+

@@ -1,0 +1,41 @@
+nav{
+	border-bottom: 1px solid black;
+}
+.overflow-scroll{
+	overflow: scroll;
+}
+.navigation li{
+	display: inline-block;
+    vertical-align: middle;
+}
+.homework_header{
+	text-align: center;
+	line-height: 30px;
+	font-size: 25px;
+	font-weight: 600;
+	
+}
+.row{	
+	margin-bottom: 2px;
+}
+
+.row div:nth-child(2n+1):not(.btn){
+	background: lightblue;
+}
+.row div:nth-child(2n+2):not(.btn){
+	background: lightgrey;
+}
+.row-flex{
+	margin-bottom: 2px;
+}
+
+.row-flex div:nth-child(2n+1):not(.btn){
+	background: lightblue;
+}
+.row-flex div:nth-child(2n+2):not(.btn){
+	background: lightgrey;
+}
+.x100{
+	width:100px;
+	height:100px;
+}

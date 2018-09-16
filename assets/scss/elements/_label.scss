@@ -1,0 +1,12 @@
+.label{
+	vertical-align: text-top;
+	
+	&__block{
+		display: block;
+	}
+	&__label-2-dot{
+		&::after{
+			content: ':';
+		}
+	}
+}

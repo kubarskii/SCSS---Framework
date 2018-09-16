@@ -1,0 +1,28 @@
+.input{
+	@extend %input;
+	height: 34px;
+	
+	&:focus{
+		border-color: map-get($inputs, border);
+		outline: 0;
+		box-shadow: $nice-shadow, 0 0 8px rgba(102,175,233,.6);
+	}	
+	
+	&[disabled]{
+		cursor: not-allowed;
+		background-color: #ededed;
+	}
+	
+	&[readonly]{
+		color: lightgrey;
+	}
+	
+	&__error{
+		@extend %input-error;
+	}
+	
+	&__icon{
+		background: url(../assets/img/input.png) no-repeat scroll 7px 7px;
+		padding-left: 30px;
+	}
+}

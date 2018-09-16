@@ -1,0 +1,84 @@
+.row-flex{
+	display: flex;	
+	flex-wrap: wrap;
+		
+	&__x-start{
+		justify-content: flex-start;
+	}
+	&__x-end{
+		justify-content: flex-end;
+	}
+	&__x-center{
+		justify-content: center;
+	}
+
+	&__y-end{
+		align-items: flex-end;
+	}
+	&__y-start{
+		align-items: flex-start;
+	}
+	&__y-center{
+		align-items: center
+	}
+	&__space-between{
+		justify-content: space-between;
+	}
+	&__space-around{
+		justify-content: space-around;
+	}
+	&__box-sizing-box{
+		box-sizing: border-box;
+	}
+	&__column{
+		flex-direction: column;
+	}
+	&__nowrap{
+		flex-wrap: nowrap;
+	}
+}
+
+
+@each $flex-item in sm, md, lg{
+	@for $i from 1 through 12{
+		.col-#{$flex-item}-#{$i}-flex{
+			padding: 10px 0;
+			flex: 0 0 calc(100%/(12/#{$i}))
+		}
+	}
+}
+.col-auto{
+	padding: 10px 0;
+	flex: 0 0 auto;
+}
+
+@include screen-optimize(sm){
+	@for $i from 1 through 12{
+		.col-sm-#{$i}-flex{
+			flex: 0 0 100%;
+		}
+	}
+}
+
+@include screen-optimize(md){
+	@for $i from 1 through 12{
+		.col-md-#{$i}-flex{
+			flex: 0 0 100%;
+		}
+	}
+}
+
+@include screen-optimize(lg){
+	@for $i from 1 through 12{
+		.col-lg-#{$i}-flex{
+			flex: 0 0 100%;
+		}
+	}
+}
+
+@for $i from 1 through 12{
+	.order-#{$i}{
+		order: #{$i};
+	}
+}
+

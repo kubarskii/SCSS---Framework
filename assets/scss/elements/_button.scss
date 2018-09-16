@@ -1,0 +1,53 @@
+.btn{
+	display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+
+	&__success{
+		 @include setButtonBgColor(success);
+		color: white;
+	}
+	&__danger{
+		 @include setButtonBgColor(danger);
+		color: white;
+	}
+	&__info{
+		 @include setButtonBgColor(info);
+		color: white;
+	}
+	&__warning{
+		 @include setButtonBgColor(warning);
+		color: white;
+	}
+	&__primary{
+		 @include setButtonBgColor(primary);
+		color: white;
+	}
+	&__secondary{
+		 @include setButtonBgColor(secondary);
+		color: white;
+	}
+	&__disabled{
+		-webkit-box-shadow: inset 0 3px 5px rgba(0,0,0,.125);
+		box-shadow: inset 0 3px 5px rgba(0,0,0,.125);
+		cursor: not-allowed;
+	}
+	&__lg{
+		padding: .5rem 1rem;
+		font-size: 1.25rem;
+		line-height: 1.5;
+	}
+	&__sm{
+		font-size: .85rem;
+		line-height: .85;
+	}
+	
+}

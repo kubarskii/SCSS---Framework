@@ -1,0 +1,32 @@
+@mixin screen-optimize($breakpoint) { 
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (max-width: #{map-get($breakpoints, $breakpoint)}) {
+      @content;
+    }
+  }
+  @else {
+    @warn "No value by key: `#{$breakpoint}`. ";
+  }
+}
+
+
+@mixin screen-optimize-min($breakpoint) { 
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (min-width: #{map-get($breakpoints, $breakpoint)}) {
+      @content;
+    }
+  }
+  @else {
+    @warn "No value by key: `#{$breakpoint}`. ";
+  }
+}
+
+	
+@mixin setButtonBgColor($bg-color){
+	background-color: map-get($button-colors, $bg-color);
+	border: 1px solid map-get($button-borders, $bg-color);
+	&:hover{
+		background-color: darken(map-get($button-colors, $bg-color), 5%);
+	}     
+}
+	

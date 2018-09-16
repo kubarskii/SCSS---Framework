@@ -1,0 +1,128 @@
+.container{
+	margin:  auto;
+	padding: 0 10px;
+	max-width: 100%;
+}
+@include screen-optimize-min(sm){
+	width: map-get($container, sm);
+}
+
+@include screen-optimize-min(md){
+	width: map-get($container, md);
+}
+
+@include screen-optimize-min(lg){
+	width: map-get($container, lg);
+}
+
+.container-fluid{
+	margin: 0 auto;
+	max-width: 100%;
+	padding: 0 10px;
+}
+
+.row{
+	display: block;
+	&:after{
+		@extend %clearfix;
+	}
+	&before{
+		@extend %clearfix;
+	}
+}
+.clearfix{
+	&:after{
+		@extend %clearfix;
+	}
+	&before{
+		@extend %clearfix;
+	}
+}
+
+@each $block in sm, md, lg{
+	@for $i from 1 through 12{
+		.col-#{$block}-#{$i}{
+			float: left;
+			padding: 10px 0;
+			position: relative;
+			width: calc(100%/(12/#{$i}))
+		}
+	}
+}
+
+@include screen-optimize(sm){
+	@for $i from 1 through 12{
+		.col-sm-#{$i}{
+			width: 100%;
+		}
+	}
+}
+@include screen-optimize(md){
+	@for $i from 1 through 12{
+		.col-md-#{$i}{
+			width: 100%;
+		}
+	}
+}
+@include screen-optimize(lg){
+	@for $i from 1 through 12{
+		.col-lg-#{$i}{
+			width: 100%;
+		}
+	}
+}
+
+@each $side in outer, inner{
+	@each $key, $space in $inner-outer-space{
+		@if ($side == outer){
+			.#{$side}-space-#{$key}{
+				margin: #{$space}px; 
+			}
+		}
+		@if ($side == inner){
+			.#{$side}-space-#{$key}{
+				padding: #{$space}px; 
+			}
+		}
+	}
+}
+
+.pull{
+	&__pull-left{
+		float: left;
+	}
+	&__pull-right{
+		float: right;
+	}	
+}
+
+.text{
+	&__text-left{
+		text-align: left;
+	}
+	&__text-right{
+		text-align: right;
+	}
+	&__text-center{
+		text-align: center;
+	}
+}
+.position{
+	&__relative{
+		position: relative;
+	}
+	&__static{
+		position: static;
+	}
+	&__absolute{
+		position: absolute;
+	}
+	&__fixed{
+		position: fixed;
+	}
+	&__inherit{
+		position: inherit;
+	}
+}
+
+

@@ -1,0 +1,17 @@
+.textarea{
+	@extend %input;
+
+	&[disabled]{
+	
+	}
+	&[readonly]{
+	
+	}
+	&:focus{
+	
+	}
+	
+	&__error{
+		@extend %input-error;
+	}
+}

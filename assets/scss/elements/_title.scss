@@ -1,0 +1,15 @@
+.title{
+	text-align: center;
+	&__h1{
+		font-size: 20px;
+		font-weight: 700;
+	}
+	&__h2{
+		font-size: 18px;
+		font-weight: 600;
+	}
+	&__h3{
+		font-size: 16px;
+		font-weight: 500;
+	}
+}
